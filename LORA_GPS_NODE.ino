@@ -44,7 +44,7 @@ void encodeGNSS() {
     payload += _byte;
     if (_byte == '\n') {
       if (payload.indexOf("GPRMC") == 1) {
-        dataSend = deviceID + payload.substring(payload.indexOf(","), payload.indexOf(",", 7)).substring(0, 7) + payload.substring(payload.indexOf(",", 7), payload.indexOf("*"));
+        dataSend = deviceID + payload.substring(payload.indexOf(","), payload.indexOf(",", 7)).substring(0, 7) + payload.substring(payload.indexOf(",", 7));
       }
 
       payload = "";
