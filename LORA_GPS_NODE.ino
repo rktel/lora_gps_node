@@ -34,6 +34,7 @@ void loop() {
 
     Serial.println(dataSend);
     rf95.send(dataSend.c_str(), dataSend.length());
+    rf95.waitPacketSent();
   }
 
 }
